@@ -36,6 +36,8 @@ const runApp = () => {
     newDiv.appendChild(newKey);
     newDiv.appendChild(newSpan);
     newDiv.appendChild(audioElement);
+
+    parent.appendChild(newDiv);
   }
 
   document.addEventListener('keydown', (e) => handleKeyPress(e));
