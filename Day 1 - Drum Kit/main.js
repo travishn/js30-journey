@@ -12,9 +12,12 @@ const keys = [
 
 const handleKeyPress = (e) => {
   const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-  if (!audio) return;
-  audio.currentTime = 0;
+  const selectedKey = document.querySelector(`div[data-key='${e.keyCode}']`);
+  console.log(selectedKey);
+  if (!audio) return; //if no associated audio element, return function early
+  audio.currentTime = 0; // allows multiple presses by rewinding sound to start
   audio.play();
+  selectedKey.classList.add('playing');
 };
 
 const runApp = () => {
