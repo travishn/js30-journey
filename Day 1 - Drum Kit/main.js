@@ -10,6 +10,10 @@ const keys = [
   { name: "L", action: "tink", sound: "./sounds/tink.wav", keycode: 76 }
 ];
 
+const handleKeyPress = (e) => {
+
+};
+
 const runApp = () => {
   const parent = document.querySelector('#main');
 
@@ -29,4 +33,6 @@ const runApp = () => {
     audioElement.setAttribute('data-key', keys[i].keycode);
     audioElement.setAttribute('src', keys[i].sound);
   }
+
+  document.addEventListener('keydown', (e) => handleKeyPress(e));
 };
