@@ -15,8 +15,18 @@ const runApp = () => {
 
   for (let i = 0; i < keys.length; i++) {
     const newDiv = document.createElement('div');
-    newDiv.setAttribute('class', 'key');
-    newDiv.setAttribute('data-key', keys[i].action);
+    newDiv.className = 'key';
+    newDiv.setAttribute('data-key', keys[i].keycode);
 
+    const newKey = document.createElement('kbd');
+    newKey.innerHTML = keys[i].name;
+
+    const newSpan = document.createElement('span');
+    newSpan.innerHTML = keys[i].action;
+    newSpan.className = 'sound';
+
+    const audioElement = document.createElement('audio');
+    audioElement.setAttribute('data-key', keys[i].keycode);
+    audioElement.setAttribute('src', keys[i].sound);
   }
 };
