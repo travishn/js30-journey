@@ -32,6 +32,10 @@ const runApp = () => {
     const audioElement = document.createElement('audio');
     audioElement.setAttribute('data-key', keys[i].keycode);
     audioElement.setAttribute('src', keys[i].sound);
+
+    newDiv.appendChild(newKey);
+    newDiv.appendChild(newSpan);
+    newDiv.appendChild(audioElement);
   }
 
   document.addEventListener('keydown', (e) => handleKeyPress(e));
