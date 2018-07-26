@@ -1,9 +1,11 @@
-body {
-  min-height: 90vh;
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  align-items: center; }
+  justify-content: center; }
 
 .nav-container {
   display: flex;
@@ -27,7 +29,35 @@ body {
 #clock {
   width: 500px;
   height: 500px;
+  border-radius: 50%;
+  background-color: white;
   border: 7px solid black;
-  border-radius: 50%; }
+  box-shadow: -10px -5px 10px black; }
+
+.clock-hand {
+  position: absolute;
+  left: calc(50% - 4px);
+  transform-origin: bottom center;
+  transition: all 0.2s cubic-bezier(0.55, -0.74, 0.13, 2.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+
+.hr-hand {
+  border: 4px solid black;
+  transform: rotate(50deg);
+  height: 18%;
+  top: 39%; }
+
+.min-hand {
+  border: 4px solid black;
+  transform: rotate(90deg);
+  top: calc(27% + 2px);
+  height: 30%; }
+
+.sec-hand {
+  border: 1px solid red;
+  transform: rotate(30deg);
+  height: 25%;
+  transform: rotate(224deg);
+  top: 33%; }
 
 /*# sourceMappingURL=application.css.map */

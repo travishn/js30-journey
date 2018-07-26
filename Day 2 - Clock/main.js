@@ -1,7 +1,7 @@
 const tick = () => {
-  const secondHand = document.querySelector('.second-hand');
-  const minuteHand = document.querySelector('.minute-hand');
-  const hourHand = document.querySelector('.hour-hand');
+  const secondHand = document.querySelector('.sec-hand');
+  const minuteHand = document.querySelector('.min-hand');
+  const hourHand = document.querySelector('.hr-hand');
 
 
 
