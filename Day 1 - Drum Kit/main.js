@@ -13,11 +13,15 @@ const keys = [
 const handleKeyPress = (e) => {
   const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
   const selectedKey = document.querySelector(`div[data-key='${e.keyCode}']`);
-  console.log(selectedKey);
   if (!audio) return; //if no associated audio element, return function early
   audio.currentTime = 0; // allows multiple presses by rewinding sound to start
   audio.play();
   selectedKey.classList.add('playing');
+};
+
+const removeTransition = (e) => {
+  if (e.propertyName !== 'transform') return; //skips if it isnt a transform => just choosing longest transition
+  this.classList.remove('playing'); //this refers to newDiv because addEventListener was called and newDiv was called against it
 };
 
 const runApp = () => {
@@ -44,6 +48,8 @@ const runApp = () => {
     newDiv.appendChild(audioElement);
 
     parent.appendChild(newDiv);
+
+    newDiv.addEventListener('transitionend', (e) => removeTransition(e));
   }
 
   document.addEventListener('keydown', (e) => handleKeyPress(e));
