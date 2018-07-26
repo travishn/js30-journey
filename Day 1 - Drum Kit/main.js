@@ -19,10 +19,11 @@ const handleKeyPress = (e) => {
   selectedKey.classList.add('playing');
 };
 
-const removeTransition = (e) => {
+// We use ES5 notation here to preserve the this of newDiv in the event listener below
+function removeTransition(e) {
   if (e.propertyName !== 'transform') return; //skips if it isnt a transform => just choosing longest transition
   this.classList.remove('playing'); //this refers to newDiv because addEventListener was called and newDiv was called against it
-};
+}
 
 const runApp = () => {
   const parent = document.querySelector('#main');
@@ -49,8 +50,9 @@ const runApp = () => {
 
     parent.appendChild(newDiv);
 
-    newDiv.addEventListener('transitionend', (e) => removeTransition(e));
+    newDiv.addEventListener('transitionend', removeTransition);
+    // newDiv.addEventListener('transitionend', (e) => removeTransition(e)); //this would make the function's context (this) be the window
   }
 
-  document.addEventListener('keydown', (e) => handleKeyPress(e));
+  document.addEventListener('keydown', handleKeyPress);
 };
