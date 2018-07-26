@@ -1,1 +1,4 @@
 .DS_Store
+.sass-cache
+./stylesheets/application/.css.map
+./Day 1 - Drum Kit/stylesheets/application.css.map
