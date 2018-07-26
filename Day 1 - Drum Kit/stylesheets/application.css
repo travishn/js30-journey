@@ -11,7 +11,7 @@ body, html {
 #main {
   display: flex;
   flex: 1;
-  min-height: 100vh;
+  min-height: 70vh;
   align-items: center;
   justify-content: center; }
 
@@ -42,5 +42,23 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600; }
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh; }
+  .nav-container a {
+    border: 2px solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    width: 10rem;
+    text-align: center;
+    color: #ffc600;
+    background: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 .5rem black;
+    text-decoration: none; }
 
 /*# sourceMappingURL=application.css.map */
