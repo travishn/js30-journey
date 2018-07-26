@@ -59,6 +59,10 @@ kbd {
     color: #ffc600;
     background: rgba(0, 0, 0, 0.8);
     text-shadow: 0 0 .5rem black;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all 0.1s ease; }
+  .nav-container a:hover {
+    border-color: #ffc600;
+    box-shadow: 0 0 2rem #ffc600; }
 
 /*# sourceMappingURL=application.css.map */
