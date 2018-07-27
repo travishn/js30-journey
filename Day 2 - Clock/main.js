@@ -14,5 +14,4 @@ const tick = () => {
     style.transform = `rotate(${hoursDegree}deg)`;
 };
 
-
 window.setInterval(tick, 1000);
