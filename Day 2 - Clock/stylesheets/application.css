@@ -33,7 +33,7 @@ html {
 .clock-bg {
   width: 500px;
   height: 500px;
-  margin: 95px 0px;
+  margin-top: 95px;
   border-radius: 50%;
   background-color: white;
   border: 7px solid black;
